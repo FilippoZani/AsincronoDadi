@@ -156,6 +156,7 @@ namespace AsincronoDadi
             });
         }
 
+
         private void btnGenera_Click(object sender, RoutedEventArgs e)
         {
             z = i + k;
