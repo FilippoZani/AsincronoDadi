@@ -35,6 +35,7 @@ namespace AsincronoDadi
         ImageSource dado6;
         int i;
         int k;
+        int z;
         Random r;
         public MainWindow()
         {
@@ -46,6 +47,7 @@ namespace AsincronoDadi
             dado5 = new BitmapImage(uri5);
             dado6 = new BitmapImage(uri6);
             r = new Random();
+            z = 0;
             EstrazioneContinua();
         }
 
@@ -149,8 +151,15 @@ namespace AsincronoDadi
                             }));
                             break;
                     }
+                    Thread.Sleep(1000);
                 }
             });
+        }
+
+        private void btnGenera_Click(object sender, RoutedEventArgs e)
+        {
+            z = i + k;
+            MessageBox.Show("Sorteggiato: " + z);
         }
     }
 }
